@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/pocket-calculator" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/nasalization-2" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="conteudo_ben10">
+        <img src="ben10.png" alt="Ben 10 Calculadora" class="img-ben10" id="ben10_voando" onclick="clicouBen10();" style="width:200px;float: left;position:absolute;">
+        <img src="ben10_nao.gif" alt="Ben 10 Calculadora" id="ben10_nao">
+    </div>
+    <div class="container">
+    <div id="conteudo_calculadora">
+        <div class="calculadora-flutuante"></div>
+        <h1 class="title2 neon-titulo">Calculadora</h1>
+        <div id="conteudo_visor">
+            <input class="form-control mb-2" type="text" id="visor">
+        </div>
+        
+        <div id="conteudo_numeros">
+            <button onclick="adicionarValorVisor(1);">1</button>
+            <button onclick="adicionarValorVisor(2);">2</button>
+            <button onclick="adicionarValorVisor(3);">3</button>
+            <button onclick="adicionarValorVisor(4);">4</button>
+            <button onclick="adicionarValorVisor(5);">5</button>
+            <button onclick="adicionarValorVisor(6);">6</button>
+            <button onclick="adicionarValorVisor(7);">7</button>
+            <button onclick="adicionarValorVisor(8);">8</button>
+            <button onclick="adicionarValorVisor(9);">9</button>
+            <button onclick="adicionarValorVisor(0);">0</button>
+            <button onclick="adicionarValorVisor('.');">.</button>
+        </div>
+        <div id="conteudo_operacoes">
+            <button onclick="adicionarValorVisor('+');">+</button>
+            <button onclick="adicionarValorVisor('-');">-</button>
+            <button onclick="adicionarValorVisor('*');">*</button>
+            <button onclick="adicionarValorVisor('/');">/</button>
+        </div>
+        <div id="conteudo_acoes">
+            <button onclick="limparValorVisor();" id="btn_limpar">C</button>
+            <button onclick="calcular();" id="btn_calcular">=</button>
+        </div>
+        <div id="conteudo_logs"></div>
+    </div>
+    <div class="aaaa"></div>
+</div>
+</div>
+        <!--
+            <div class="linha mb-2">
+            <button class="btn btn-dark" onclick="limparValorVisor('C')">C</button>
+            <button class="btn btn-dark" onclick="limparValorVisor('%')">%</button>
+            <button class="btn btn-dark" onclick="adicionarValorVisor('/')">/</button>
+            <button class="btn btn-dark" onclick="adicionarValorVisor('*')">*</button>
+        </div>
+        <table>
+            <tr>
+                <td><button class="btn btn-dark" onclick="limparValorVisor('C')">C</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('%')">%</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('/')">/</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('*')">*</button></td>
+            </tr>
+    
+            <tr>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(7)">7</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(8)">8</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(9)">9</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('-')">-</button></td>
+            </tr>
+    
+            <tr>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(4)">4</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(5)">5</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(6)">6</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('+')">+</button></td>
+            </tr>
+    
+            <tr>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(1)">1</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(2)">2</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor(3)">3</button></td>
+                <td rowspan="2"><button" class="btn btn-dark butaozin" onclick="calcular()" >=</button></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2"><button class="btn btn-dark" style="width: 100%;" onclick="adicionarValorVisor(0)">0</button></td>
+                <td><button class="btn btn-dark" onclick="adicionarValorVisor('.')">.</button></td>
+            </tr>
+        </table>
+         -->
+    <script>
+        function clicouBen10(){
+            document.getElementById("ben10_nao").style.display = "block";
+            window.setTimeout(function (){
+                document.getElementById("ben10_nao").style.display = "none";
+            }, 3500);
+        }
+    </script>
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
